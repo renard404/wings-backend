@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var eventRouter = require("./routes/event");
 var participantRouter = require("./routes/registration");
+var accomodationRouter = require("./routes/accomodation");
 
 var app = express();
 app.use(bodyParser.urlencoded({
@@ -37,6 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/events", eventRouter);
 app.use("/participants", participantRouter);
+app.use("/accomodations", accomodationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
